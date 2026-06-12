@@ -4,7 +4,7 @@ Marketing site for [LocalRecord](https://github.com/AntoineArt/localrecord).
 
 Static HTML/CSS, deployed on Vercel.
 
-## Deploy
+**Live site:** [localrecord.vercel.app](https://localrecord.vercel.app)
 
 ### Option A: npm global CLI (recommended if pnpm global is broken)
 
