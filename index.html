@@ -49,6 +49,7 @@
               <a
                 class="btn btn-primary"
                 href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe"
+                data-download-link
                 download
               >
                 Download for Windows
@@ -63,8 +64,8 @@
               </a>
             </div>
             <p class="meta">
-              v0.1.0 · MIT License ·
-              <a href="https://github.com/AntoineArt/localrecord/releases/latest">All releases</a>
+              v<span id="release-version">…</span> · MIT License ·
+              <a href="https://github.com/AntoineArt/localrecord/releases/latest" data-releases-link>All releases</a>
             </p>
           </div>
 
@@ -122,7 +123,7 @@
             <h2>Install in 30 seconds</h2>
             <ol class="steps">
               <li>
-                <a href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe">Download <code>localrecord.exe</code></a>
+                <a href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe" data-download-link>Download <code>localrecord.exe</code></a>
               </li>
               <li>Run it — look for the icon in the system tray</li>
               <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to record</li>
@@ -166,6 +167,7 @@
             <a
               class="btn btn-primary"
               href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe"
+              data-download-link
               download
             >
               Download localrecord.exe
@@ -197,5 +199,6 @@
         </p>
       </div>
     </footer>
+    <script src="release.js" defer></script>
   </body>
 </html>
