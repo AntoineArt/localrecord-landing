@@ -6,7 +6,7 @@
     <title>LocalRecord — Record mic + desktop audio on Windows</title>
     <meta
       name="description"
-      content="Free, open-source Windows tray app. One hotkey records your microphone and desktop audio, saves a WAV, and copies it to the clipboard."
+      content="Free, open-source Windows tray app. One hotkey records your microphone and desktop audio, saves a compact Opus file, and copies it to the clipboard."
     />
     <meta name="theme-color" content="#2d3446" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
@@ -43,7 +43,7 @@
             <h1>Record mic and desktop audio in one click</h1>
             <p class="lead">
               A tiny tray app that captures what you hear and what you say, mixes
-              them into one WAV, and copies the result to your clipboard. No OBS,
+              them into one file, and copies the result to your clipboard. No OBS,
               no DAW — just a hotkey.
             </p>
             <div class="cta-row">
@@ -107,8 +107,12 @@
               <p>Start and stop from anywhere. Default is <code>Ctrl+Shift+R</code>, and you can change it from the tray menu.</p>
             </article>
             <article class="feature">
+              <h3>Compact files</h3>
+              <p>Default Opus output keeps recordings small (~30 MB/hour). Switch to WAV in settings if you need uncompressed paste-into-Audacity workflow.</p>
+            </article>
+            <article class="feature">
               <h3>Clipboard ready</h3>
-              <p>When recording stops, the WAV is saved and copied so you can paste straight into Audacity or similar tools. A clear toast shows the filename and folder.</p>
+              <p>When recording stops, the file is saved and copied to the clipboard. A clear toast shows the filename and folder.</p>
             </article>
             <article class="feature">
               <h3>Lives in the tray</h3>
