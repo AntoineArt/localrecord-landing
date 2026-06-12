@@ -1,0 +1,13 @@
+{
+  "name": "localrecord-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page for LocalRecord",
+  "scripts": {
+    "deploy": "vercel --prod",
+    "login": "vercel login"
+  },
+  "devDependencies": {
+    "vercel": "41.7.8"
+  }
+}
