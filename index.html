@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalRecord — Record mic + desktop audio on Windows</title>
+    <meta
+      name="description"
+      content="Free, open-source Windows tray app. One hotkey records your microphone and desktop audio, saves a WAV, and copies it to the clipboard."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e63946'/%3E%3Cpath d='M16 7a4 4 0 0 1 4 4v5a4 4 0 0 1-8 0v-5a4 4 0 0 1 4-4z' fill='white'/%3E%3Cpath d='M11 18h10v2a5 5 0 0 1-10 0v-2z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo" href="/">
+          <span class="logo-mark" aria-hidden="true"></span>
+          LocalRecord
+        </a>
+        <nav class="nav">
+          <a href="#features">Features</a>
+          <a href="#install">Install</a>
+          <a href="#smartscreen">SmartScreen</a>
+          <a class="nav-github" href="https://github.com/AntoineArt/localrecord" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Free · Open source · Windows 10+</p>
+            <h1>Record mic and desktop audio in one click</h1>
+            <p class="lead">
+              A tiny tray app that captures what you hear and what you say, mixes
+              them into one WAV, and copies the result to your clipboard. No OBS,
+              no DAW — just a hotkey.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe"
+                download
+              >
+                Download for Windows
+              </a>
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/AntoineArt/localrecord"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source on GitHub
+              </a>
+            </div>
+            <p class="meta">
+              v0.1.0 · MIT License ·
+              <a href="https://github.com/AntoineArt/localrecord/releases/latest">All releases</a>
+            </p>
+          </div>
+
+          <div class="hero-card" aria-hidden="true">
+            <div class="card-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="card-body">
+              <div class="tray-row">
+                <span class="tray-icon"></span>
+                <span>LocalRecord</span>
+                <span class="recording-pill">Recording…</span>
+              </div>
+              <div class="waveform">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="card-caption">
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to toggle
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2>Everything you need, nothing you do not</h2>
+          <div class="feature-grid">
+            <article class="feature">
+              <h3>Dual audio capture</h3>
+              <p>WASAPI loopback for desktop sound plus your microphone, mixed automatically — the same core idea as OBS.</p>
+            </article>
+            <article class="feature">
+              <h3>Global hotkey</h3>
+              <p>Start and stop from anywhere. Default is <code>Ctrl+Shift+R</code>, and you can change it from the tray menu.</p>
+            </article>
+            <article class="feature">
+              <h3>Clipboard ready</h3>
+              <p>When recording stops, the WAV is saved and copied so you can paste straight into Audacity or similar tools.</p>
+            </article>
+            <article class="feature">
+              <h3>Lives in the tray</h3>
+              <p>No main window clutter. Right-click for controls, startup toggle, and opening your recordings folder.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="section section-muted">
+        <div class="container install-grid">
+          <div>
+            <h2>Install in 30 seconds</h2>
+            <ol class="steps">
+              <li>
+                <a href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe">Download <code>localrecord.exe</code></a>
+              </li>
+              <li>Run it — look for the icon in the system tray</li>
+              <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to record</li>
+              <li>Press again to stop, then paste or open the saved file</li>
+            </ol>
+            <p class="path-note">
+              Recordings:
+              <code>%LOCALAPPDATA%\localrecord\LocalRecord\recordings\</code>
+            </p>
+          </div>
+          <div id="smartscreen" class="notice">
+            <h3>About the SmartScreen warning</h3>
+            <p>
+              LocalRecord is a <strong>small, free, open-source project</strong>.
+              It is <strong>not code-signed</strong> because Authenticode certificates
+              cost hundreds of dollars per year — more than this project can justify
+              right now.
+            </p>
+            <p>
+              Windows SmartScreen may say the app is "potentially harmful" the first
+              time you run it. That is normal for unsigned software, not proof that
+              anything is wrong. The full source code is on GitHub for anyone to inspect.
+            </p>
+            <p><strong>To proceed:</strong></p>
+            <ol>
+              <li>Click <strong>More info</strong> on the blue SmartScreen dialog</li>
+              <li>Click <strong>Run anyway</strong></li>
+            </ol>
+            <p class="notice-footer">
+              The app uses mic capture, global hotkeys, and clipboard access — behaviors
+              Windows monitors closely. If you prefer, build it yourself from source.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-bottom">
+        <div class="container cta-bottom-inner">
+          <h2>Ready to try it?</h2>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/AntoineArt/localrecord/releases/latest/download/localrecord.exe"
+              download
+            >
+              Download localrecord.exe
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/AntoineArt/localrecord"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Star on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          Built by
+          <a href="https://github.com/AntoineArt" target="_blank" rel="noopener noreferrer">Antoine Art</a>
+          · MIT License
+        </p>
+        <p>
+          <a href="https://github.com/AntoineArt/localrecord">Repository</a>
+          ·
+          <a href="https://github.com/AntoineArt/localrecord/releases/latest">Releases</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
