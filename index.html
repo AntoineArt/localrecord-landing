@@ -8,8 +8,9 @@
       name="description"
       content="Free, open-source Windows tray app. One hotkey records your microphone and desktop audio, saves a WAV, and copies it to the clipboard."
     />
-    <meta name="theme-color" content="#0f1419" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e63946'/%3E%3Cpath d='M16 7a4 4 0 0 1 4 4v5a4 4 0 0 1-8 0v-5a4 4 0 0 1 4-4z' fill='white'/%3E%3Cpath d='M11 18h10v2a5 5 0 0 1-10 0v-2z' fill='white'/%3E%3C/svg%3E" />
+    <meta name="theme-color" content="#2d3446" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="canonical" href="https://localrecord.doublea.engineering/" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +23,7 @@
     <header class="header">
       <div class="container header-inner">
         <a class="logo" href="/">
-          <span class="logo-mark" aria-hidden="true"></span>
+          <img class="logo-mark" src="icon.svg" alt="" width="28" height="28" />
           LocalRecord
         </a>
         <nav class="nav">
@@ -77,7 +78,7 @@
             </div>
             <div class="card-body">
               <div class="tray-row">
-                <span class="tray-icon"></span>
+                <img class="tray-icon" src="icon-recording.svg" alt="" width="20" height="20" />
                 <span>LocalRecord</span>
                 <span class="recording-pill">Recording…</span>
               </div>
